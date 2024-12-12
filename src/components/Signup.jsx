@@ -29,7 +29,7 @@ function Signup() {
             email: data.email,
             password: data.password,
         };
-        await axios.post("http://localhost:4000/user/signup", userInfo)
+        await axios.post("https://book-store-backend-xhce.onrender.com/user/signup", userInfo)
             .then((res) => {
                 console.log(res.data);
                 if (res.data) {

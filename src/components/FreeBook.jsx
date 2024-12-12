@@ -1,13 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import list from '../ListData/list.json'
+// import list from '../ListData/list.json'
 import Cards from './Cards';
+import axios from 'axios'
 
 function FreeBook() {
-    const filterData = list.filter((data) => data.category === "Free");
+    // const filterData = list.filter((data) => data.category === "Free");
     // console.log(filterData); // see list.json data in Console
+
+    const [book, setBook] = useState([]);
+    useEffect(() => {
+        const getBook = async () => {
+            try {
+                const res = await axios.get("http://localhost:4000/book");
+                const data = res.data.filter((data) => data.category === "Free");
+                console.log(data);
+                setBook(data);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        getBook();
+    }, []);
+
+
 
     // react slick slider
     // direct copy , examples, responsive
@@ -61,12 +79,12 @@ function FreeBook() {
             <div>
                 {/* pehle ka data remove, kiya and paste our cards */}
                 <Slider {...settings}>
-                   {
-                    filterData.map((item)=>(
-                        // props liye hai, cards.jsx se
-                        <Cards item ={item} key={item.id}/>
-                    )) 
-                   }
+                    {
+                        book.map((item) => (
+                            // props liye hai, cards.jsx se
+                            <Cards item={item} key={item.id} />
+                        ))
+                    }
                 </Slider>
             </div>
         </div>

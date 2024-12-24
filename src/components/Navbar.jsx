@@ -56,10 +56,10 @@ function Navbar() {
                 <Link to='/course' >Course</Link>
             </li>
             <li>
-                <a>Contact</a>
+                <Link to='/contact' >Contact</Link>
             </li>
             <li>
-                <a>About</a>
+                <Link to='/about' >About</Link>
             </li>
         </>)
 

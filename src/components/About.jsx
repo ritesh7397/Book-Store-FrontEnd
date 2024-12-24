@@ -20,7 +20,7 @@ function About() {
         <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
           <section className="space-y-6">
             <p className="text-gray-700 text-lg">
-              Welcome to <span className="font-bold text-indigo-600">Book Store</span>, your one-stop destination for all your book needs. Our mission is to connect readers with the books they love while promoting the joy of reading across all ages.
+              Welcome to <span className="font-bold text-pink-500">Book Store</span>, your one-stop destination for all your book needs. Our mission is to connect readers with the books they love while promoting the joy of reading across all ages.
             </p>
 
             <p className="text-gray-700 text-lg">
@@ -28,7 +28,7 @@ function About() {
             </p>
 
             <p className="text-gray-700 text-lg">
-              At <span className="font-bold text-indigo-600">Book Store</span>, we believe in the transformative power of books. Whether you're exploring new worlds, gaining knowledge, or simply enjoying a story, we strive to make every reading journey unforgettable.
+              At <span className="font-bold text-pink-500">Book Store</span>, we believe in the transformative power of books. Whether you're exploring new worlds, gaining knowledge, or simply enjoying a story, we strive to make every reading journey unforgettable.
             </p>
           </section>
 
